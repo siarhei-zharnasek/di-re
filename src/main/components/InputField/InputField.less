@@ -1,0 +1,36 @@
+.field-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 30px;
+
+  &__text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+    z-index: 0;
+
+    &--focused {
+      top: -20px;
+    }
+  }
+
+  &__input {
+    z-index: 1;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  border: none;
+  -webkit-text-fill-color: unset;
+  -webkit-box-shadow: none;
+  transition: none;
+  background-color: white !important;
+}

@@ -1,0 +1,38 @@
+.radio-wrapper {
+  display: block;
+  padding-left: 20px;
+  position: relative;
+  user-select: none;
+  cursor: pointer;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    transition: 0.2s;
+    background: #fff;
+    border-radius: 2px;
+  }
+
+  &:before {
+    width: 13px;
+    height: 13px;
+    top: 2px;
+    left: 0;
+    border: 1px solid black;
+  }
+
+  &--checked {
+    &:after {
+      width: 9px;
+      height: 9px;
+      top: 5px;
+      left: 3px;
+      background: #5f9acf;
+    }
+  }
+
+  &__input {
+    display: none;
+  }
+}
